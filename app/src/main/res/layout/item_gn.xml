@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        app:chipBackgroundColor="@color/itemBackColor"
+        app:chipIconEnabled="false"
+        app:chipIconTint="@color/editTextColor"
+        app:chipStrokeColor="@color/line"
+        app:chipStrokeWidth="1dp"
+        app:ensureMinTouchTargetSize="false" />
+
+    <!--com.google.android.material.button.MaterialButton
+        android:id="@+id/button1"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/itemBackColor"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="6dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/editTextColor"
+        android:textStyle="normal"
+        app:cornerRadius="18dp"
+        app:rippleColor="@color/rippleColor">
+
+    </com.google.android.material.button.MaterialButton-->
+</LinearLayout>

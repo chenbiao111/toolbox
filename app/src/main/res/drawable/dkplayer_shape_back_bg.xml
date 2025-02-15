@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- corners设置圆角，只适用于rectangle -->
+    <corners android:radius="20dp"/>
+
+    <!-- solid指定形状的填充色，只有android:color一个属性 -->
+    <solid android:color="@color/dkplayer_background_color"/>
+</shape>
+

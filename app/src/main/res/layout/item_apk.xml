@@ -1,0 +1,92 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_linear"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/cardview1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="10dp"
+		app:cardBackgroundColor="@color/itemBackColor"
+		app:strokeColor="@color/line"
+		app:strokeWidth="1dp"
+		app:cardElevation="0dp"
+		app:rippleColor="@color/rippleColor">
+
+		<LinearLayout
+			android:id="@+id/linear1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/song"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="16dp"
+				android:layout_marginTop="16dp"
+				android:layout_marginRight="16dp"
+				android:focusable="false"
+				android:textColor="@color/editTextColor"
+				android:textSize="16sp" />
+
+			<LinearLayout
+				android:id="@+id/linear2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+
+				<com.google.android.material.card.MaterialCardView
+					android:id="@+id/cardview2"
+					android:layout_width="48dp"
+					android:layout_height="48dp"
+					android:layout_margin="16dp"
+					app:cardBackgroundColor="#00000000"
+					app:cardElevation="0dp"
+					app:rippleColor="#BDBDBD">
+
+					<ImageView
+						android:id="@+id/img_icon"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:focusable="false"
+						android:scaleType="fitCenter" />
+				</com.google.android.material.card.MaterialCardView>
+
+				<LinearLayout
+					android:id="@+id/linear3"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginRight="16dp"
+					android:gravity="center_vertical"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/size"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:focusable="false"
+						android:singleLine="true"
+						android:textColor="#757575"
+						android:textSize="14sp" />
+
+					<TextView
+						android:id="@+id/packagename"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="2dp"
+						android:focusable="false"
+						android:maxLines="2"
+						android:textColor="#757575"
+						android:textSize="14sp" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</com.google.android.material.card.MaterialCardView>
+</LinearLayout>

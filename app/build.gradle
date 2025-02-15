@@ -1,0 +1,118 @@
+plugins {
+    id 'com.android.application'
+    id 'stringfog'
+}
+
+stringfog {
+    // 这是加解密key，可以自由定义。
+    key 'shixin'
+    // 开关
+    enable true
+    // 加解密库的实现类路径，需和上面配置的加解密算法库一致。
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密。
+    //fogPackages = ['com.tkmndz.nbkj']
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.shixin.app"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1020
+        versionName "1.2.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('../debug.jks')
+            storePassword 'xiao9426+'
+            keyAlias = '呆萌助手'
+            keyPassword 'xiao9426+'
+        }
+        release {
+            storeFile file('../debug.jks')
+            storePassword 'xiao9426+'
+            keyAlias = '呆萌助手'
+            keyPassword 'xiao9426+'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.kongzue.baseokhttp_v3:baseokhttp_v3:3.2.1'
+    implementation 'com.kongzue.basejson:basejson:1.0.6'
+    implementation 'com.airbnb.android:lottie:3.7.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.3'
+    implementation 'com.github.yalantis:ucrop:2.2.6'
+    implementation 'com.github.megatronking.stringfog:xor:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.hjq:xxpermissions:10.2'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.12.0"
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.robinhood.ticker:ticker:2.0.2'
+    implementation 'org.adw.library:discrete-seekbar:1.0.1'
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
+    implementation 'com.tapadoo.android:alerter:7.0.1'
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.huangyz0918:androidwm-light:0.1.2'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.11'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'jp.wasabeef:blurry:4.0.0'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+    implementation 'me.wcy:lrcview:2.2'
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+    implementation 'com.caverock:androidsvg-aar:1.4'
+    implementation 'com.just.agentweb:agentweb-androidx:4.1.4'
+    implementation 'com.just.agentweb:filechooser-androidx:4.1.4'
+    implementation 'org.jsoup:jsoup:1.14.1'
+    implementation 'com.white:progressview:1.0.1'
+    implementation 'com.github.xiaohaibin:XBanner:androidx_v1.1.3'
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-java:3.3.5'
+    implementation 'xyz.doikki.android.dkplayer:player-exo:3.3.5'
+    implementation 'com.github.li-xiaojun:XPopup:2.5.13'
+    implementation 'com.github.princekin-f:EasyFloat:2.0.3'
+
+    implementation 'com.umeng.umsdk:common:9.4.0'
+    implementation 'com.umeng.umsdk:asms:1.2.3'
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

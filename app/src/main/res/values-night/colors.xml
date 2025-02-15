@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="zts">#FF5187F4</color>
+    <color name="hui">#FF757575</color>
+    <color name="appbarColor">#FF202125</color>
+    <color name="backgroundColor">#FF202125</color>
+    <color name="rippleColor">#FFBDBDBD</color>
+    <color name="editTextColor">#FFFFFFFF</color>
+    <color name="itemBackColor">#FF303135</color>
+    <color name="SelectedBackColor">#FF424242</color>
+    <color name="line">#FF404145</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="success">#FF4CAF50</color>
+    <color name="error">#FFF44336</color>
+</resources>

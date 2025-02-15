@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shixin.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:name="com.shixin.app.Application"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tools.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,UnusedAttribute">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.shixin.app.AvatarMakeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/头像制作"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.QqVoiceActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/QQ变音"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.LoveTalkActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/恋爱话术"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.yellow.VideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.yellow.PlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.yellow.ZhiboActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.yellow.YellowActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureClarityActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片清晰度提升"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureColoringActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/黑白图上色"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.LiveChinaActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/直播中国"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.IptvActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/IPTV电视直播"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.SearchImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/以图搜图"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DateCalculatorActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/日期计算器"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.NeteaseSongActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/网易云音乐解析"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.KSongActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/全名K歌音乐解析"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DonationListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/捐赠榜单"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.GifActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/GIF图片分解"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PhoneAttributionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/手机号归属地查询"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.IpSiteActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/IP查询地理位置"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/视频播放器"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.VideoDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/影视详情"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.VideoSearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/影视搜索"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.CollectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/功能收藏"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.SearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/功能搜索"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.BrowserActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/浏览器"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DebugActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/程序出错"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.VipVideoBrowserActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/VIP影视解析"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.VipVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/VIP影视解析"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.LuckyWheelActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/做决定"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.RandomArticleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/随机一文"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.RandomActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/随机数生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.MetalDetectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/金属探测器"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ConversionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/进制转换"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.Utf8Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/UTF8转码"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.MiniEnglishActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/迷你英文生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.SpecialTextActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/特殊文本生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.SmallDigitActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/数字转上下标"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.RC4Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/RC4加解密"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.Base64Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/Base64加解密"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.MorseCodeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/摩斯电码"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.SplitWordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/拆字"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.RelativeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/亲戚称呼计算"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DeWatermark1Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/抖音快手去水印"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DeWatermarkActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/短视频解析"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.LanzouActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/蓝奏云直链提取"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.WebPictureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/网页图片提取"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.GifmakerPictureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/快手图集下载"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.BiliBiliActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/B站封面提取"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ExtractAudioActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/视频提取音频"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureUrlActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片取直链"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.IconSearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/阿里图标库搜索"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.RubbishActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/垃圾分类查询"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.EmoticonActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/表情包搜索"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.AbbreviatedActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/缩写查询"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.MusicActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/音乐搜索器"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.IdiomActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/成语词典"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DictionaryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/字典查询"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PowerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/王者荣耀最低战力地区查询"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.Avatar1Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/头像大全"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.AvatarActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/头像大全"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.SgameActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/王者荣耀图集"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.Wallpaper1Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/壁纸大全"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.WallpaperActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/壁纸大全"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureSketchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片转素描图"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureLowPolyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/LowPoly图片生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureBlurActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/毛玻璃图片生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureGreyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片转黑白"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureCompressActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片压缩"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PicturePixelActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片像素化"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureTextActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片文字化"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureHideActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/隐藏图制作"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ColorPictureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/纯色图制作"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureNineActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/九宫格切图"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureWaterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片水印"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.QRCodeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/二维码生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.PictureColorActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/图片取色"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.FontSizeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/系统字体大小调节"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.VideoWallpaperActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/桌面视频壁纸"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ScreenActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/屏幕坏点检测"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.AppActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/应用管理"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.WifiActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/WIFI密码查看"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.TransactionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/Google翻译"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.HistoryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/历史上的今天"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.DrawActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/简易画板"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ShortUrlActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/短网址生成"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.WebCodeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/网页获源"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.Led2Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/LED手机字幕"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.Led1Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/LED手机字幕"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.LedActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/LED手机字幕"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ClockActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/时间屏幕"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.DayNewsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/每日60秒早报"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.ProtractorActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/量角器"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.LevelActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/水平仪"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+        <activity
+            android:name="com.shixin.app.CompassActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/指南针"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.RulerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/刻度尺"
+            android:theme="@style/Theme.Tools.FullScreen" />
+        <activity
+            android:name="com.shixin.app.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Tools.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.Tools.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.shixin.app.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.shixin.app.apkextract"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.shixin.app.utils.VideoLiveWallpaper"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:process=":wallpaper" android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/livewallpaper" />
+        </service>
+        <service
+            android:name="com.shixin.app.utils.VideoLiveWallpaper2"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:process=":wallpaper" android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/livewallpaper" />
+        </service>
+    </application>
+
+</manifest>

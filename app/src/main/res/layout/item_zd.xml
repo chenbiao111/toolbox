@@ -1,0 +1,218 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/itemBackColor"
+        app:strokeColor="@color/line"
+        app:strokeWidth="1dp"
+        app:cardElevation="0dp"
+        app:rippleColor="@color/rippleColor">
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/itemBackColor"
+                    app:strokeColor="@color/line"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="0dp"
+                    app:rippleColor="@color/rippleColor">
+
+                    <ImageView
+                        android:id="@+id/imageview1"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:id="@+id/linear5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textview1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:textColor="@color/editTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/imageview2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="16dp"
+                            android:focusable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ic_twotone_volume_up_24"
+                            app:tint="@color/zts" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:id="@+id/linear7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textview4"
+                                android:focusable="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/部首"
+                                android:textSize="14sp"
+                                android:textColor="#5187F4"/>
+
+                            <TextView
+                                android:id="@+id/textview8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:textColor="@color/editTextColor"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linear8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textview5"
+                                android:focusable="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/结构"
+                                android:textSize="14sp"
+                                android:textColor="#5187F4"/>
+
+                            <TextView
+                                android:id="@+id/textview9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:textColor="@color/editTextColor"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/linear10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textview6"
+                                android:focusable="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/总笔画"
+                                android:textSize="14sp"
+                                android:textColor="#5187F4"/>
+
+                            <TextView
+                                android:id="@+id/textview10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:textColor="@color/editTextColor"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linear11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textview7"
+                                android:focusable="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/偏旁笔画"
+                                android:textSize="14sp"
+                                android:textColor="#5187F4"/>
+
+                            <TextView
+                                android:id="@+id/textview11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:textColor="@color/editTextColor"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview12"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/解释"
+                android:textSize="16sp"
+                android:textColor="@color/zts"/>
+
+            <TextView
+                android:id="@+id/textview13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:focusable="false"
+                android:textColor="@color/editTextColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

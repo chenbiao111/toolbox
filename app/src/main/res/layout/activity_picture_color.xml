@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/root"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/backgroundColor"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/backgroundColor"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/mImageView1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scaleType="matrix" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#007f7f7f"
+			android:orientation="vertical"
+			android:visibility="visible">
+
+			<com.shixin.app.widget.SelectView
+				android:id="@+id/mImageView2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<com.google.android.material.card.MaterialCardView
+				android:id="@+id/mLayout1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="16dp"
+				app:cardBackgroundColor="@color/itemBackColor"
+				app:cardElevation="0dp"
+				app:strokeColor="@color/itemBackColor"
+				app:strokeWidth="1dp">
+
+				<LinearLayout
+					android:id="@+id/mLayout2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:padding="12dp">
+
+					<TextView
+						android:id="@+id/mTVx"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone" />
+
+					<TextView
+						android:id="@+id/mTVy"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:visibility="gone" />
+
+					<TextView
+						android:id="@+id/mTVa"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:visibility="gone" />
+
+					<TextView
+						android:id="@+id/mTVr"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:textColor="@color/editTextColor" />
+
+					<TextView
+						android:id="@+id/mTVg"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:visibility="gone" />
+
+					<TextView
+						android:id="@+id/mTVb"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:visibility="gone" />
+
+					<TextView
+						android:id="@+id/mTVc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:visibility="gone" />
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/itemBackColor" />
+
+	<LinearLayout
+		android:id="@+id/mMenu1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/backgroundColor"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:padding="10dp"
+		android:visibility="visible">
+
+		<com.google.android.material.button.MaterialButton
+			android:id="@+id/button2"
+			style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="10dp"
+			android:layout_weight="1"
+			android:insetTop="0dp"
+			android:insetBottom="0dp"
+			android:text="@string/选择图片"
+			android:onClick="choose"
+			android:textColor="@color/white"
+			app:backgroundTint="@color/zts"
+			app:rippleColor="@color/rippleColor"
+			tools:ignore="UsingOnClickInXml" />
+
+
+		<com.google.android.material.button.MaterialButton
+			android:id="@+id/suo"
+			style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="10dp"
+			android:layout_weight="1"
+			android:insetTop="0dp"
+			android:insetBottom="0dp"
+			android:text="@string/缩放图片"
+			android:onClick="suo"
+			android:textColor="@color/white"
+			app:backgroundTint="@color/zts"
+			app:rippleColor="@color/rippleColor"
+			tools:ignore="UsingOnClickInXml" />
+
+
+		<com.google.android.material.button.MaterialButton
+			style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_margin="10dp"
+			android:layout_weight="1"
+			android:insetTop="0dp"
+			android:insetBottom="0dp"
+			android:text="@string/复制颜色"
+			android:onClick="copy"
+			android:textColor="@color/white"
+			app:backgroundTint="@color/zts"
+			app:rippleColor="@color/rippleColor"
+			tools:ignore="UsingOnClickInXml" />
+
+
+	</LinearLayout>
+
+</LinearLayout>
+

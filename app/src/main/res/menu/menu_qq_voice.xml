@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_twotone_playlist_add_24"
+        android:title="@string/导入音频"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/ic_twotone_help_24"
+        android:title="@string/使用帮助"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/select_no"
+        android:icon="@drawable/ic_twotone_check_box_outline_blank_24"
+        android:title="@string/取消全选"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/select_yes"
+        android:icon="@drawable/ic_twotone_check_box_24"
+        android:title="@string/全部选择"
+        app:showAsAction="always" />
+
+</menu>

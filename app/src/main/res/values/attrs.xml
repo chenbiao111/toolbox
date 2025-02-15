@@ -1,0 +1,108 @@
+<resources>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomUnLockView">
+        <!-- 一行点的个数，共有count*count个圆点密码-->
+        <attr name="count" format="integer" />
+        <!-- 文本提示的颜色-->
+        <attr name="color_text_tips" format="color" />
+        <!-- 正常密码圆点及线的颜色-->
+        <attr name="color_normal" format="color" />
+        <!-- 按压密码圆点及线的颜色-->
+        <attr name="color_press" format="color" />
+        <!-- 密码错误圆点及线的颜色-->
+        <attr name="color_error" format="color" />
+        <!-- 最大锁定次数-->
+        <attr name="max_lock_times" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LevelView">
+        <attr name="limitRadius" format="dimension" />
+        <attr name="limitColor" format="color"/>
+        <attr name="limitCircleWidth" format="dimension"/>
+        <attr name="bubbleRadius" format="dimension"/>
+        <attr name="bubbleRuleColor" format="color"/>
+        <attr name="bubbleRuleWidth" format="dimension"/>
+        <attr name="bubbleRuleRadius" format="dimension"/>
+        <attr name="bubbleColor" format="color" />
+        <attr name="horizontalColor" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="MarqueeView">
+
+        <attr name="marqueeview_repet_type" format="enum">
+            <enum name="repet_oncetime" value="0"/><!-- 播放一次 -->
+            <enum name="repet_interval" value="1"/>  <!--连续播放 循环结束再继续下次循环-->
+            <enum name="repet_continuous" value="2"/>  <!--连续播放 到末尾直接继续下次循环-->
+        </attr><!--循环模式-->
+
+        <attr name="marqueeview_text_distance" format="integer"/><!--每个item之间的距离-->
+        <attr name="marqueeview_text_startlocationdistance" format="float"/><!--开始的起始位置 按距离控件左边的百分比 0~1之间 -->
+
+        <attr name="marqueeview_text_speed" format="float"/><!--播放速度 也就是文字滚动速度-->
+        <attr name="marqueeview_text_color" format="color|reference"/><!-- 文字颜色 -->
+        <attr name="marqueeview_text_size" format="float"/><!-- 文字大小 -->
+
+        <attr name="marqueeview_isclickalbe_stop" format="boolean"/><!--是否点击暂停-->
+        <attr name="marqueeview_is_resetLocation" format="boolean"/><!--重新改变内容的时候 ， 是否初始化 位置，默认为true，改变-->
+
+    </declare-styleable>
+
+
+    <declare-styleable name="AutoFlowLayout">
+        <attr name="singleLine" format="boolean"></attr>
+        <attr name="maxLines" format="integer"></attr>
+        <attr name="multiChecked" format="boolean"></attr>
+        <attr name="horizontalSpace" format="dimension"></attr>
+        <attr name="verticalSpace" format="dimension"></attr>
+        <attr name="columnNumbers" format="integer"></attr>
+        <attr name="rowNumbers" format="integer"></attr>
+        <attr name="cutLineWidth" format="dimension"></attr>
+        <attr name="cutLineColor" format="color"></attr>
+        <attr name="cutLine" format="boolean"></attr>
+        <attr name="lineCenter" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="RulerView">
+        <attr name="unit" format="enum">
+            <enum name="inch" value="0"/>
+            <enum name="cm" value="1"/>
+        </attr>
+
+        <attr name="guideScaleTextSize" format="dimension" />
+        <attr name="graduatedScaleWidth" format="dimension" />
+        <attr name="graduatedScaleBaseLength" format="dimension" />
+        <attr name="scaleColor" format="color" />
+
+        <attr name="pointerRadius" format="dimension" />
+        <attr name="pointerStrokeWidth" format="dimension" />
+        <attr name="pointerColor" format="color" />
+
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="defaultLabelText" format="string" />
+        <attr name="labelColor" format="color" />
+
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <!--大转盘-->
+    <declare-styleable name="LuckPan">
+        <attr name="LPColor1" format="reference|color" />
+        <attr name="LPColor2" format="reference|color" />
+        <attr name="LPColor3" format="reference|color" />
+        <attr name="LPTextColor" format="reference|color" />
+        <attr name="LPTextSize" format="integer" />
+    </declare-styleable>
+    <!--转盘背景-->
+    <declare-styleable name="LuckPanLayot">
+        <attr name="LPLBgColor" format="reference|color" />
+        <attr name="LPLColor1" format="reference|color" />
+        <attr name="LPLColor2" format="reference|color" />
+    </declare-styleable>
+
+</resources>

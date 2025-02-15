@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appbarColor"
+        android:stateListAnimator="@null"
+        android:theme="@style/Theme.Tools.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/appbarColor"
+            app:popupTheme="@style/Theme.Tools.PopupOverlay" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/itemBackColor" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:srlEnablePureScrollMode="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:clipToPadding="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/backgroundColor">
+
+                    <LinearLayout
+                        android:id="@+id/layout_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button1"
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/选择图片"
+                            android:textColor="@color/white"
+                            android:onClick="choose"
+                            app:backgroundTint="@color/zts"
+                            app:rippleColor="@color/rippleColor"
+                            tools:ignore="UsingOnClickInXml" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button2"
+                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/导出图片"
+                            android:textColor="@color/white"
+                            android:onClick="save"
+                            app:backgroundTint="@color/zts"
+                            app:rippleColor="@color/rippleColor"
+                            tools:ignore="UsingOnClickInXml" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/iv_user_head"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/layout_title"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#2f9c91"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:cardBackgroundColor="@color/appbarColor"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_launcher_round" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tv_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_title"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toEndOf="@id/iv_user_head"
+                        android:text="@string/效果预览"
+                        android:textColor="@color/editTextColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_user"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/iv_user_head"
+                        android:text="@string/下图是发送到朋友圈后的效果"
+                        android:textColor="@color/hui"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_images"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/iv_user_head">
+
+
+                        <ImageView
+                            android:id="@+id/iv_image1"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_marginEnd="2.88dp"
+                            android:layout_marginBottom="2.88dp"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image2"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_marginEnd="2.88dp"
+                            android:layout_marginBottom="2.88dp"
+                            android:layout_toEndOf="@id/iv_image1"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image3"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_marginBottom="2.88dp"
+                            android:layout_toEndOf="@id/iv_image2"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image4"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_below="@id/iv_image1"
+                            android:layout_marginEnd="2.88dp"
+                            android:layout_marginBottom="2.88dp"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image5"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_below="@id/iv_image2"
+                            android:layout_marginEnd="2.88dp"
+                            android:layout_marginBottom="2.88dp"
+                            android:layout_toEndOf="@id/iv_image4"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image6"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_below="@id/iv_image3"
+                            android:layout_marginBottom="2.88dp"
+                            android:layout_toEndOf="@id/iv_image5"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image7"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_below="@id/iv_image4"
+                            android:layout_marginEnd="2.88dp"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image8"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_below="@id/iv_image5"
+                            android:layout_marginEnd="2.88dp"
+                            android:layout_toEndOf="@id/iv_image7"
+                            android:background="@color/itemBackColor" />
+
+                        <ImageView
+                            android:id="@+id/iv_image9"
+                            android:layout_width="80.04dp"
+                            android:layout_height="80.04dp"
+                            android:layout_below="@id/iv_image6"
+                            android:layout_toEndOf="@id/iv_image8"
+                            android:background="@color/itemBackColor" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_images"
+                        android:layout_alignStart="@id/layout_images"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/刚刚"
+                            android:textColor="@color/hui"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="@string/删除"
+                            android:textColor="#60748a"
+                            android:textSize="13.5sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/layout_time"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/itemBackColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_divider">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="@string/九宫格步骤"
+                            android:textColor="@color/editTextColor"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_divider"
+                        android:background="@color/backgroundColor"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:clickable="true"
+                            android:textSize="16sp"
+                            android:focusable="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#50000000"
+                        android:visibility="gone">
+
+                        <com.shixin.app.widget.LiquidCircleView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
